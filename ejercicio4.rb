@@ -6,7 +6,7 @@ edades = [32, 28, 41, 19]
 # personas_hash = {"Carolina": 32, "Alejandro":28, "María Jesús":41, "Valentín":19}
 puts "\n Ejercicio 2.1"
 personas_hash = personas.zip(edades).to_h
-print personas_hash
+print "#{personas_hash}\n"
 
 
 #2.2 Crear un método que reciba el hash y devuelva el promedio de las edades del hash pasado como argumento.
@@ -15,7 +15,6 @@ puts "\n Ejercicio 2.2"
 def promedio(hash)
   acumulador = 0
   hash.each do |key ,value|
-    puts value
     acumulador += value
   end
   acumulador = acumulador / hash.count.to_f

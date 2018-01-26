@@ -12,11 +12,10 @@ puts valor.keys
 puts "\nSacar el promedio del valor de los platos."
 acumulador = 0
 restaurant_menu.each do |key ,value|
-  acumulador += value
+	acumulador += value
 end
 acumulador = acumulador / restaurant_menu.count.to_f
 puts "El promedio de las edades es #{acumulador}"
-
 
 puts "\nCrear un arreglo con solo los nombres de los platos."
 platos = (restaurant_menu.keys).to_a
@@ -26,15 +25,18 @@ puts "\nCrear un arreglo con solo los valores de los platos."
 valores = (restaurant_menu.values).to_a
 puts "Los valores son = #{valores}"
 
-puts "Modificar el hash y agregar el IVA a los valores de los platos (multiplicar por 1.19)."
+puts "\nModificar el hash y agregar el IVA a los valores de los platos (multiplicar por 1.19)."
 restaurant_menu.each do |key ,value|
-  restaurant_menu[key] = value * 1.19
+	restaurant_menu[key] = value * 1.19
 end
 print restaurant_menu
 
-puts "Dar descuento del 20% para los platos que tengan un nombre de más 1 una palabra."
+puts "\n\nDar descuento del 20% para los platos que tengan un nombre de más 1 una palabra."
 restaurant_menu.each do |key ,value|
-  if 
-  restaurant_menu[key] = value * 1.19
+	if key.include?(' ') 
+		restaurant_menu["#{key}"] = (value * 0.2) + value
+	end
 end
+
+puts "Nuevos platos con descuento e IVA inlcuidas = #{restaurant_menu}" 
 
