@@ -110,6 +110,7 @@ while opcion != 10
         agrupar = []
         agrupar.push(alumnos.group_by{|ele| ele[:genero] })
         
-        puts "Agrupación por genero: #{agrupar} \n\n"
+        puts "Agrupación por genero: #{agrupar} \n\n"+
+        puts agrupar
         end
       end

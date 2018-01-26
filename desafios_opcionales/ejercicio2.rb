@@ -20,8 +20,7 @@ print arreglo_unico
 print "\n\n"
 
 # Utilizando .map y .gsub eliminar las vocales de todos los nombres.
-"Super guper bag".gsub "g", "d" # => "Super duper bad"
-"hello".gsub(/[aeiou]/, '*')  
+
 sin_vocales = nombres.map{|i| i.gsub(/[AEIOUaeiou]/, '')}
 print sin_vocales
 print "\n\n"
